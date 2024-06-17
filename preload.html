@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<head>
+
+  <!-- 字體 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playwrite+IS:wght@100..400&display=swap" rel="stylesheet">
+  
+  <!-- 載入動畫 -->
+  <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
+
+  <style> 
+
+  .playwrite-is{
+  font-family: "Playwrite IS", cursive;
+  font-size: 80px;
+  font-style: normal;
+  }
+
+     
+    body{
+      background-color: #161616;
+    }
+
+    body p{
+      color: white;
+    }
+
+    .animation{
+      margin-top: 8%;
+    }
+
+
+  </style>
+
+<script> 
+  window.onload = function() {
+      setTimeout(function() {
+          window.location.href = 'index.html';
+      }, 3000);
+  };
+</script>
+</head>
+
+<body>
+  <center>
+    <div class = "animation">
+      <dotlottie-player src="https://lottie.host/f917a06b-fa4a-4a25-8a11-97d7bd456e23/zFU590Il5j.json" background="#161616" speed="1" style="width: 40%; height: 40%" direction="-1" playMode="normal" loop autoplay></dotlottie-player>
+    <p class = "playwrite-is">MariCat</p>
+    </div>
+  </center>
+
+</body>

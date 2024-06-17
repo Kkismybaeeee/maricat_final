@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+
+  <title>Maricat</title>
+
+  <link rel="icon" href="/MariCat/img/caticon.svg" type="image/svg+xml">
+
+
+  <!-- 字體 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playwrite+IS:wght@100..400&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/MariCat/styles.css">
+  <link rel="script" href="/MariCat/script.js">
+
+  <style>  
+    .playwrite-is{
+      font-family: "Playwrite IS", cursive;
+      font-size: 20px;
+      font-style: normal;
+    }
+  </style>
+
+</head>
+
+<body class="fade-in" onload="setSelectedState()">
+
+<div class="content">
+    <div class="nav">
+      <ul>
+          <li id="gamecenter"><a href="index.html">Game</a></li>
+          <li id="contact"><a href="contact.html">Contact</a></li>
+          <li id="donate"><a href="index.html.donate">Donate</a></li>
+        
+
+      </ul>
+    </div>
+
+    <div class="unityContainer"></div>
+
+
+    <div class="guidence">
+      <img src="/MariCat/img/guides.png" alt="">
+    </div>
+
+    <div class="doente">
+      <button class="btn-87" onclick="window.open('https://paypal.me/mouuuuTW?country.x=TW&locale.x=en_US', '_blank')">
+        <span>Donate Link</span>
+        <svg aria-hidden><circle></circle></svg>
+      </button>
+
+      <p class="playwrite-is">您的支持是我製作最大的動力（錢也是）<br>
+        點選按鈕前往贊助連結!</p>
+    </div>
+    
+  
+  </div>
+
+  <script>
+    // Function to set selected state
+    function setSelectedState() {
+      const navItems = document.querySelectorAll('.nav ul li a');
+      navItems.forEach(item => item.parentElement.classList.remove('selected'));
+
+      const currentPath = window.location.pathname;
+      const currentHash = window.location.hash;
+
+      if (currentPath.includes('contact.html')) {
+        document.getElementById('contact').classList.add('selected');
+      } else if (currentHash === '#donate') {
+        document.getElementById('donate').classList.add('selected');
+      } else {
+        document.getElementById('gamecenter').classList.add('selected');
+      }
+    }
+
+    // Function to scroll to the bottom of the page
+    function scrollToBottom() {
+      window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+    }
+
+    // Add click event listeners to nav items
+    document.getElementById('gamecenter').addEventListener('click', function(event) {
+      event.preventDefault(); // Prevent default anchor behavior
+      window.location.href = 'index.html';
+    });
+
+    document.getElementById('contact').addEventListener('click', function(event) {
+      event.preventDefault(); // Prevent default anchor behavior
+      window.location.href = 'contact.html';
+    });
+
+    document.getElementById('donate').addEventListener('click', function(event) {
+      event.preventDefault(); // Prevent default anchor behavior
+      window.location.href = 'index.html#donate';
+      scrollToBottom(); // Scroll to the bottom of the page
+    });
+  </script>
+  
+</body>
+</html>
