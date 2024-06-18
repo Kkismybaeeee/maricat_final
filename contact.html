@@ -3,15 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <title>MariCat</title>
+    <link rel="icon" href="/TemplateData/caticon.svg" type="image/svg+xml">
+
 
     <!-- 字體 -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playwrite+IS:wght@100..400&display=swap" rel="stylesheet">
     
-    <link rel="script" href="/MariCat/script.js">
+    <link rel="script" href="/script.js">
 
     <style>
+        @keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  animation: fadeIn 2s ease-in-out;
+}
         body {
             font-family: 'Playwrite IS', cursive;
             margin: 0;
@@ -142,9 +156,9 @@
 <body class="fade-in">
     <div class="nav">
         <ul>
-            <li id="gamecenter"><a href="index.html">Game</a></li>
-            <li id="contact"><a href="contact.html">Contact</a></li>
-            <li id="donate"><a href="index.html.donate">Donate</a></li>
+            <li id="gamecenter"><a href="/index.html">Game</a></li>
+            <li id="contact"><a href="/contact.html">Contact</a></li>
+            <li id="donate"><a href="/index.html">Donate</a></li>
         </ul>
     </div>
 
